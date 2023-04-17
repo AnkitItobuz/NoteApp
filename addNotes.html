@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6dc7929f7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="container">
+      <section>
+        <div class="head d-flex col-md-4 flex-wrap">
+          <form id="submit-button">
+            <a href="./index.html" class="back-button"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></a>
+            <h1 class="add-notes">Add Notes</h1>
+            <button class="submit">
+              <a href="./index.html"><i class="fa-solid fa-check"></i></a>
+            </button>
+            <h2 class="input-title">Title</h2>
+            <br />
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Enter Title"
+              required
+            />
+            <br />
+            <br />
+            <h2>Description</h2>
+            <textarea
+              id="input-box2"
+              placeholder="Enter Content"
+              rows="4"
+              cols="33"
+              required
+            ></textarea>
+
+            <br />
+          </form>
+        </div>
+      </section>
+
+      <section class="notes-preview"></section>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

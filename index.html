@@ -6,34 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note App</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6dc7929f7c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <section>
-      <div class="head">
-        <form id="submit-button">
-          <input
-            type="text"
-            id="input-box"
-            placeholder="Enter Title"
-            required
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            id="input-box2"
-            placeholder="Enter Content"
-            required
-          />
-          <br />
+    <section class="container">
+      <span class="all-notes">All Notes</span>
+      <section>
+        <input
+          type="text"
+          placeholder="Search your notes here"
+          class="input-box"
+        />
+        <a href="./addNotes.html" class="plus-icon"
+          ><i class="fa-solid fa-plus"></i
+        ></a>
+      </section>
 
-          <input type="submit" id="submit" value="Save" />
-        </form>
-      </div>
+      <section class="notes-preview"></section>
     </section>
-
-    <section class="notes-preview"></section>
-
     <script src="./script.js"></script>
   </body>
 </html>
