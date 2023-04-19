@@ -11,20 +11,71 @@
       crossorigin="anonymous"
     ></script>
 
-    <style>
-    
-    </style>
+    <style></style>
   </head>
   <body>
+    <div class="add-notes-modal hide" id="add-notes">
+      <div class="modal-content">
+        <div class="add-notes-top-section">
+          <button class="back-button button" id="back-button">
+            <img
+              src="./images/back.svg"
+              height="25px"
+              width="25px"
+              alt="back-button"
+            />
+          </button>
+          <label class="top-sec-head">Add notes</label>
+          <button class="submit-button button" id="submit-button">
+            <img
+              src="./images/check.svg"
+              height="25px"
+              width="25px"
+              alt="submit-button"
+            />
+          </button>
+        </div>
+        <form>
+          <br />
+          <lable style="margin-left: 0.5rem; font-size: 30px; font-weight: 400"
+            >Title</lable
+          >
+          <input
+            type="text"
+            class="notes-title"
+            placeholder="Enter title"
+            id="input-box"
+            required
+          />
+          <label>Description</label>
+          <textarea
+            name=""
+            id="input-box2"
+            cols="49"
+            rows="6"
+            class="notes-desc"
+            placeholder="Enter description"
+            required
+          ></textarea>
+        </form>
+      </div>
+    </div>
     <section class="container">
       <div class="container-header">All Notes</div>
       <div class="search-box">
-        <img src="./images/search.svg" alt="search icon">
-        <input type="text" placeholder="Search notes">
-        <img src="./images/plus.svg" class="plus-icon" alt="Add notes">
+        <img src="./images/search.svg" alt="search icon" />
+        <input type="text" placeholder="Search notes" />
+        <img
+          src="./images/plus.svg"
+          class="plus-icon"
+          id="add-notes-icon"
+          alt="Add notes"
+        />
       </div>
+      <section class="notes-preview">
+        
+      </section>
     </section>
-    <section class="notes-preview"></section>
 
     <script src="./script.js"></script>
   </body>

@@ -1,44 +1,80 @@
-console.log("hello");
-const notesPreview = document.getElementsByClassName("notes-preview")[0];
-const notesArr = [];
-const input1 = document.getElementById("input-box");
-const input2 = document.getElementById("input-box2");
+const icons = document.getElementById("add-notes-icon");
+const addNotes = document.getElementsByClassName("add-notes-modal");
+
+const back = document.getElementById("back-button");
 const submit = document.getElementById("submit-button");
 
-submit.addEventListener("submit", function (e) {
-  e.preventDefault();
-  var date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
+icons.addEventListener("click", function () {
+  addNotes[0].classList.toggle("hide");
+});
 
-  let currDate = `${day} - ${month} - ${year}`;
-  const content = {
-    title: input1.value,
-    content: input2.value,
-    date: currDate,
-  };
-  notesArr.push(content);
-
-  showNotes();
+back.addEventListener("click", function () {
+  addNotes[0].classList.toggle("hide");
 });
 
 
-function showNotes() {
-  notesPreview.innerHTML = "";
+  const notesPreview = document.getElementsByClassName("notes-preview")[0];
+  const notesArr = [];
 
-  for (let a = 0; a < notesArr.length; a++) {
-    const tag = document.createElement("div");
-    let date = notesArr[a].date;
-    let head = notesArr[a].title;
-    let content = notesArr[a].content;
+  const input1 = document.getElementById("input-box");
+  const input2 = document.getElementById("input-box2");
 
-    tag.innerHTML = `<h4>${date}</h4> <h1>${head}</h1> <p>${content}</p>`;
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  submit.addEventListener("click", function ()  {
+    var date = new Date();
+    let month = months[date.getMonth()];
+    let day = date.getDate();
+    let year = date.getFullYear();
 
-    notesPreview.appendChild(tag);
+    let currDate = `${month} ${day}, ${year}`;
+    if(input1.value === ""){
+      alert('please fill all the boxes');
+      return false;
+    }
+    else if(input2.value === ""){
+      alert('please fill all the boxes');
+      return false;
+    }
+    const content = {
+      title: input1.value,
+      content: input2.value,
+      date: currDate,
+    };
+    notesArr.push(content);
 
-    tag.classList.add("box");
-    input1.value = "";
-    input2.value = "";
+    showNotes();
+  
+
+  function showNotes() {
+    notesPreview.innerHTML = "";
+
+    for (let a = 0; a < notesArr.length; a++) {
+      const tag = document.createElement("div");
+      let date = notesArr[a].date;
+      let head = notesArr[a].title;
+      let content = notesArr[a].content;
+
+      tag.innerHTML = `<h4>${date}</h4> <h1>${head}</h1> <p>${content}</p>`;
+
+      notesPreview.appendChild(tag);
+
+      tag.classList.add("box");
+      input1.value = "";
+      input2.value = "";
+    }
   }
-}
+  addNotes[0].classList.toggle("hide");
+});

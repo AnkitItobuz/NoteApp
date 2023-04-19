@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
 body {
   background-color: #d6c3e6;
   font-family: "Poppins", sans-serif;
@@ -7,25 +9,24 @@ body {
   width: 39%;
   margin: auto;
   background-color: #f2dce8;
-  height: 100vh;
+  min-height: 100vh;
   border-radius: 30px;
   margin-top: 3rem;
   box-shadow: 10px 10px 100px #522f6ea4;
 }
 
 .container-header {
-  font-size: 30px;
-  font-weight: 700;
-  padding: 3rem 3rem 2rem;
+  font-size: 40px;
+  font-weight: 900;
+  padding: 3rem 3rem 1rem;
 }
 
 .search-box {
   background-color: white;
-  width: 80%;
+  width: 90%;
   margin-left: 1rem;
   display: flex;
   align-items: center;
-  gap: 20px;
   border-radius: 10px;
 }
 
@@ -34,12 +35,14 @@ body {
   width: 25px;
   margin-left: 1rem;
   cursor: pointer;
+  margin: 0.5rem;
 }
 
-.search-box >input {
+.search-box > input {
   font-size: 30px;
   border: none;
   font-weight: 200;
+  width: 100%;
   margin: 0.5rem 0.5rem 0.5rem;
 }
 
@@ -48,8 +51,139 @@ body {
 }
 
 .plus-icon {
-  background-color: white;
+  background-color: rgb(227 206 215 / 62%);
   padding: 1rem 1rem 1rem;
   border-radius: 10px;
   cursor: pointer;
+}
+.plus-icon:hover {
+  background-color: #f2dce8;
+}
+
+.add-notes-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.modal-content {
+  width: 29%;
+  margin: auto;
+  background-color: #f2dce8;
+  height: 50vh;
+  border-radius: 30px;
+  margin-top: 3rem;
+  box-shadow: 10px 10px 100px #522f6ea4;
+  padding: 1rem;
+  font-size: 25px;
+}
+
+.notes-title {
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  width: 28vw;
+  margin-bottom: 1rem;
+}
+
+.notes-desc {
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.button {
+  border: none;
+  background-color: #f2dce8;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 1px 2px 2px #522f6ea4;
+}
+
+.button:hover {
+  background-color: #dd86b6;
+}
+
+.modal-content > form > label {
+  margin-left: 0.5rem;
+  font-weight: 200;
+  font-size: 30px;
+}
+
+.add-notes-top-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-sec-head {
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+input::placeholder {
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+textarea::placeholder {
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.box {
+  background-color: rgb(247 248 242 / 92%);
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+  box-shadow: 2px 2px 5px #522f6ea4;
+  padding-bottom: 1rem;
+
+}
+
+h1 {
+  color: rgb(15, 82, 82);
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 1.5rem;
+  padding-top: 1.5rem;
+  text-decoration: underline;
+  font-size: 37px;
+}
+
+h4 {
+  float: right;
+  font-weight: 200;
+  margin-right: 0.5rem;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #828282;
+  margin: 1rem;
 }
