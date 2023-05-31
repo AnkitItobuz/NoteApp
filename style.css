@@ -23,7 +23,6 @@ body {
 
 .search-box {
   background-color: white;
-  width: 90%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -61,7 +60,7 @@ input::placeholder {
   border-radius: 10px;
   cursor: pointer;
   padding: 12px;
-    margin: 5px;
+  margin: 5px;
 }
 .plus-icon:hover {
   background-color: #f2dce8;
@@ -173,6 +172,8 @@ textarea:focus {
   margin-top: 1.5rem;
   padding-bottom: 1rem;
 
+  
+
 }
 
 h1 {
@@ -212,4 +213,18 @@ p {
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 2px 2px 5px #a28696;
+}
+
+.box-button {
+  float: right;
+  display: flex;
+  gap: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+  .search-box {
+    width: 90%;
+  }
 }
